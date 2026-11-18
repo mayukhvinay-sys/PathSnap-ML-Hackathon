@@ -1,0 +1,8 @@
+# Raw data root (read-only, not committed). Edit if your folder is elsewhere.
+data_root: "../Student folder/Student folder"
+partitions:
+  train: train
+  student_test: student_test
+processed_dir: data/processed
+seed: 42
+crs_metric: "EPSG:25832"
