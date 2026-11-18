@@ -1,0 +1,12 @@
+# STUB written by Member C so the code runs before Member B's real file (H1) arrives.
+# B: overwrite this file. Keep the key name FEATURE_COLS; you may only ADD columns.
+FEATURE_COLS:
+  - dist_m
+  - offset_frac
+  - arc_len_m
+  - heading_diff_deg
+  - speed_mps
+  - rank_dist
+  - dist_gap_best
+  - n_cands
+  - has_twin
