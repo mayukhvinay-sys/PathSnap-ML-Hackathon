@@ -1,0 +1,5 @@
+{
+  "beta": 2.0,
+  "max_route_hops": 6,
+  "disconnected_penalty": 8.0
+}
