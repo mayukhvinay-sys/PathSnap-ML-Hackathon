@@ -2,6 +2,5 @@ __pycache__/
 *.pyc
 .pytest_cache/
 data/processed/dummy/
-data/processed/*.parquet
 results/optuna_study.pkl
 Student folder/
