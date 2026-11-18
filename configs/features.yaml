@@ -1,12 +1,14 @@
-# STUB written by Member C so the code runs before Member B's real file (H1) arrives.
-# B: overwrite this file. Keep the key name FEATURE_COLS; you may only ADD columns.
+# Shared contract: feature columns used by every model. Owner: Member B.
+# Add columns if needed, but never rename or remove existing ones.
 FEATURE_COLS:
-  - dist_m
-  - offset_frac
-  - arc_len_m
-  - heading_diff_deg
-  - speed_mps
-  - rank_dist
-  - dist_gap_best
-  - n_cands
-  - has_twin
+  - dist_m             # distance from GPS point to the candidate arc (metres)
+  - offset_frac        # position of the projected point along the arc (0 to 1)
+  - arc_len_m          # arc length (metres)
+  - heading_diff_deg   # angle between GPS heading and arc bearing (0 to 180)
+  - speed_mps          # speed from neighbouring points (reset after gaps)
+  - rank_dist          # 1 = nearest candidate of this GPS point
+  - dist_gap_best      # dist_m minus the nearest candidate's dist_m
+  - n_cands            # number of candidates for this GPS point
+  - has_twin           # 1 if the reverse arc exists in the network
+KEY_COLS: [trip_id, obs_idx, t, x_m, y_m, lon, lat, arc_id, after_gap]
+LABEL_COL: label
