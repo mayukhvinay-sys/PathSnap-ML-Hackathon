@@ -5,4 +5,6 @@ partitions:
   student_test: student_test
 processed_dir: data/processed
 seed: 42
-crs_metric: "EPSG:25832"
+# Trips are spread across Europe: each trip is projected with its own local
+# azimuthal equidistant projection (WGS84) centred on its GPS track, in metres.
+crs_metric: "local aeqd per trip"
