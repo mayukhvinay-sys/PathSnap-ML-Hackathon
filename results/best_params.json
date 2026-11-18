@@ -1,0 +1,24 @@
+{
+    "model": "HistGradientBoosting",
+    "model_key": "hgb",
+    "best_value_cv_macro_f1": 0.9063961554038423,
+    "best_params": {
+        "learning_rate": 0.028180680291847244,
+        "max_iter": 139,
+        "max_leaf_nodes": 92,
+        "max_depth": 7,
+        "min_samples_leaf": 54,
+        "l2_regularization": 0.0029257577949824438,
+        "max_bins": 127
+    },
+    "fixed_params": {
+        "early_stopping": false
+    },
+    "max_train_rows_per_fold": 300000,
+    "cv_folds": 5,
+    "seed": 42,
+    "total_trials": 10,
+    "completed_trials": 8,
+    "pruned_trials": 2,
+    "optimization_time_seconds": 394.04342760000145
+}

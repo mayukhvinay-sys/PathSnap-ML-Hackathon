@@ -1,0 +1,4 @@
+variant,model,cv_macro_f1_mean,cv_macro_f1_std,cv_top1,cv_logloss,st_top1,st_macro_f1,st_logloss,infer_time_s,train_time_s
+untuned,HistGradientBoosting,0.903006,0.0113214,0.827445,0.119177,0.844173,0.908935,0.111016,0.22313,1.70983
+tuned,HistGradientBoosting_tuned,0.906396,0.0124551,0.834266,0.0899171,0.851695,0.91242,0.0800428,0.592312,3.36714
+delta (tuned - untuned),HistGradientBoosting,0.00339,0.0011337,0.006821,-0.0292599,0.007522,0.003485,-0.0309732,0.369182,1.65731

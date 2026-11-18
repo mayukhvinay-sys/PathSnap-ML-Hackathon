@@ -1,0 +1,28 @@
+{
+  "model_name": "HistGradientBoosting_tuned",
+  "feature_cols": [
+    "dist_m",
+    "offset_frac",
+    "arc_len_m",
+    "heading_diff_deg",
+    "speed_mps",
+    "rank_dist",
+    "dist_gap_best",
+    "n_cands",
+    "has_twin"
+  ],
+  "seed": 42,
+  "tuned": true,
+  "params": {
+    "learning_rate": 0.028180680291847244,
+    "max_iter": 139,
+    "max_leaf_nodes": 92,
+    "max_depth": 7,
+    "min_samples_leaf": 54,
+    "l2_regularization": 0.0029257577949824438,
+    "max_bins": 127
+  },
+  "tuning_trials": 10,
+  "max_train_rows": 300000,
+  "selection_metric": "CV Macro-F1"
+}
