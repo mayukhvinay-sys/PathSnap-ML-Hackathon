@@ -28,6 +28,14 @@ def load_config(name):
 
 
 def data_root():
+    """Raw data folder (contains train/ and student_test/).
+
+    The environment variable PATHSNAP_DATA_ROOT overrides configs/paths.yaml, so each
+    machine can point to its own copy of the data without editing the shared config.
+    """
+    import os
+    if os.environ.get("PATHSNAP_DATA_ROOT"):
+        return Path(os.environ["PATHSNAP_DATA_ROOT"]).resolve()
     cfg = load_config("paths.yaml")
     return (REPO_ROOT / cfg["data_root"]).resolve()
 
