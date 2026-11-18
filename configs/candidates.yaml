@@ -1,5 +1,5 @@
 # Candidate generation settings (to be justified with results/miss_rate.csv)
-radius_m: 75        # search radius around each GPS point
+radius_m: 100       # search radius around each GPS point (chosen from results/miss_rate.csv)
 top_k: 12           # keep the K nearest arcs by point-to-segment distance
 gap_seconds: 30     # a point is after_gap = 1 if the previous point is more than this earlier
 label_max_dist_m: 100  # reference arc is -1 if no route arc is closer than this
