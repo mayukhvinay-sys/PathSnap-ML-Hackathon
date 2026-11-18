@@ -25,4 +25,4 @@ Turn on **Use demo response** in the sidebar to preview the layout with `mock_pr
 - `GET /trips` returns `{ "trips": ["00000000", ...] }`.
 - `POST /predict` accepts `{ "trip_id": "00000000" }` and returns `trip_id`, `gps`, `pred_arcs`, `pred_path`, `classifier_path`, and `metrics`. GPS and route coordinates are `[latitude, longitude]` pairs. The UI shows classifier-only and HMM/Viterbi paths as separate layers and displays classifier/HMM top-1 scores, route continuity, point count, and latency. Metric values can be `null` when no reference route is available; those display as unavailable.
 
-The interface does not request or display reference routes or labels. It draws GPS observations and the predicted path as separate map layers.
+The map uses OpenStreetMap tiles and needs no tile-service API key. Its layers distinguish blue GPS observations, a purple dashed classifier-only path, and the orange HMM/Viterbi path. The classifier chooses a candidate independently at each observation; HMM/Viterbi considers the sequence and road-to-road continuity, so it can reduce implausible jumps. The interface does not request or display reference routes or labels.
